@@ -37,7 +37,7 @@ Para usar La Tribonera To-Do, siga os seguintes passos (exemplos):
 
 As seguintes pessoas contribuiram para este projeto:
 
-* [ENZO FALCHI GABAN](https://github.com)
+* [ENZO FALCHI GABAN](https://github.com/egaban)
 * [GABRIEL DA SILVA MOLINA](https://github.com/gabrielmolinex)
 * [JOAO VICTOR MUNHOZ](https://github.com/JoaoMunhoz01)
 * [LUIZ HENRIQUE ANDRADE SOUZA](https://github.com/LuizHSouza)
