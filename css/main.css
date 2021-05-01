@@ -1,328 +1,281 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 html, body {
-    margin: 0;
-    background-color: #0C141C;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 62.5%;
+  margin: 0;
+  background-color: #0C141C;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%;
 }
 
 h1 {
-    font-size: 15rem;
-    margin: 10px;
-    color: #0C141C;
+  font-size: 15rem;
+  margin: 10px;
+  color: #0C141C;
 }
 
 h2 {
-    font-size: 3.6rem;
-    line-height: 44px;
-    margin-bottom: 1rem;
-    color: #FFFFFF;
+  font-size: 3.6rem;
+  line-height: 44px;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
 }
 
 span {
-    font-size: 2rem;
-    line-height: 24px;
+  font-size: 2rem;
+  line-height: 24px;
 
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 #sidebar {
-    width: 600px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 600px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    padding-left: 30px;
-    padding-right: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 
-    background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
 }
 
 .container-login {
-    display: flex;
+  display: flex;
 }
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
 form {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
-    color: #fff;
-    font-weight: bold;
-    font-size: 2.4rem;
-    margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
 }
 
 input {
-    font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
 
-    outline: none;
-    padding: 20px;
-    background: #FFFFFF;
-    border: 3px solid #AFAFAF;
-    box-sizing: border-box;
-    border-radius: 15px;
-    padding: 0.75rem 1.5rem;
+  outline: none;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 3px solid #AFAFAF;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 0.75rem 1.5rem;
 
-    margin-bottom: 2rem;
-}
-
-.email-input {
-    width: 100%;
-    position: relative;
-    left: 0%;
-    right: 0%;
-    top: 20%;
-    bottom: 0%;
-
-}
-
-.input-form {
-    font-family: Montserrat;
-    font-size: 18px;
-    color: #0C141C;
-    outline: none;
-    height: 20px;
-    padding: 20px;
-    background: #FFFFFF;
-    border: 3px solid #AFAFAF;
-    box-sizing: border-box;
-    border-radius: 15px;
-}
-
-
-.password-input {
-    width: 100%;
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 50%;
-    bottom: 90%;
-
-
+  margin-bottom: 2rem;
 }
 
 .login-button {
-    font-size: 2rem;
-    width: 20rem;
-    height: 5rem;
-    color: white;
-    background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
-    border-radius: 100px;
-    cursor: pointer;
+  font-size: 2rem;
+  width: 20rem;
+  height: 5rem;
+  color: white;
+  background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  border-radius: 100px;
+  cursor: pointer;
 
-    border: none;
-    outline: none;
-    margin-bottom: 1rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
 
-    transition: filter 0.2s;
+  transition: filter 0.2s;
 }
 
 .login-button:hover {
-    transition: filter 0.2s;
-    filter: brightness(150%);
+  transition: filter 0.2s;
+  filter: brightness(150%);
 }
 
 span.register-text {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 span.register-text a {
-    color: #B272F2;
+  color: #B272F2;
 }
 
 /*Layout para todos os botões de login e register*/
 
 .button-login-register {
-    font-size: 20px;
-    font-family: Montserrat;
-    color: white;
-    background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
-    border-radius: 2000px;
-    border: none;
-    cursor: pointer;
-    outline: none;
+  font-size: 20px;
+  font-family: Montserrat;
+  color: white;
+  background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  border-radius: 2000px;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .text-register {
-    position: absolute;
-    width: 362px;
-    height: 24px;
-    left: 17%;
-    top: 100%;
+  position: absolute;
+  width: 362px;
+  height: 24px;
+  left: 17%;
+  top: 100%;
 
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 
-    color: #FFFFFF;
-
+  color: #FFFFFF;
 }
 
 .text-register a {
-    background-clip: border-box;
-    text-decoration: none;
-    background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-clip: border-box;
+  text-decoration: none;
+  background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*Registro*/
 
 #container-register {
-    position: absolute;
-    width: 551px;
-    height: 595px;
-    left: 444px;
-    top: 214px;
-
+  position: absolute;
+  width: 551px;
+  height: 595px;
+  left: 444px;
+  top: 214px;
 }
 
 #container-name {
-    position: absolute;
-    width: 240px;
-    height: 113px;
-    left: 444px;
-    top: 214px;
-
+  position: absolute;
+  width: 240px;
+  height: 113px;
+  left: 444px;
+  top: 214px;
 }
 
 #container-surname {
-    position: absolute;
-    width: 240px;
-    height: 113px;
-    left: 755px;
-    top: 214px;
-
+  position: absolute;
+  width: 240px;
+  height: 113px;
+  left: 755px;
+  top: 214px;
 }
 
 #container-email {
-    position: absolute;
-    width: 551px;
-    height: 113px;
-    left: 444px;
-    top: 364px;
-
+  position: absolute;
+  width: 551px;
+  height: 113px;
+  left: 444px;
+  top: 364px;
 }
 
 #container-password {
-    position: absolute;
-    width: 551px;
-    height: 113px;
-    left: 444px;
-    top: 514px;
-
+  position: absolute;
+  width: 551px;
+  height: 113px;
+  left: 444px;
+  top: 514px;
 }
 
 .button-register {
-    position: absolute;
-    width: 260px;
-    height: 58.81px;
-    left: 590px;
-    top: 689px;
-
+  position: absolute;
+  width: 260px;
+  height: 58.81px;
+  left: 590px;
+  top: 689px;
 }
-
-
 
 /********** CSS LUIZ ************/
 
 .block {
-    width: 500px;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .block h1 {
-    color: #fff;
+  color: #fff;
 }
 
 .block h2 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .block button {
-    width: 70%;
-    height: 30px;
-    background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
-    padding:5px;
-   margin:15px auto;
-    color:#fff;
-    -webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-
+  width: 70%;
+  height: 30px;
+  background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  padding:5px;
+  margin:15px auto;
+  color:#fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 
 
 .arredonda {
-    height: 30px;
-        -webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
+  height: 30px;
+    -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .tarefas {
-    width: 70%;
-    height: 30px;
-    line-height: 30px;
-    background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
-    padding:5px;
-   margin:15px auto;
-    color:#fff;
-    -webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-text-align: left;
-text-indent: 15px;
-
+  width: 70%;
+  height: 30px;
+  line-height: 30px;
+  background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  padding:5px;
+  margin:15px auto;
+  color:#fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: left;
+  text-indent: 15px;
 }
 
 .tarefas input[type="image"] {
-    height: 30px;
-    width: 30px;
-    float: right;
-    margin: 0 2px 0 2px;
+  height: 30px;
+  width: 30px;
+  float: right;
+  margin: 0 2px 0 2px;
 }
 
 .checkbox {
-    width: 25px;
-    height: 25px;
-    float:left;
+  width: 25px;
+  height: 25px;
+  float:left;
 }
 
 .add {
-    width: 70%;
-    height: 30px;
-    line-height: 30px;
-   margin:0px auto;
-    color:#fff;
-    text-align: left;
-
+  width: 70%;
+  height: 30px;
+  line-height: 30px;
+  margin:0px auto;
+  color:#fff;
+  text-align: left;
 }
 
 .add input {
-    width:87%;
+  width:87%;
 }
 
 .add input[type="image"] {
-    height: 30px;
-    width: 30px;
-    float: right;
-    margin: 0 2px 0 2px;
+  height: 30px;
+  width: 30px;
+  float: right;
+  margin: 0 2px 0 2px;
 }
