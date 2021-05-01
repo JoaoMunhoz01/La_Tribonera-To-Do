@@ -39,8 +39,8 @@ span {
 
   background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
 }
+.container {
 
-.container-login {
   display: flex;
 }
 
@@ -78,7 +78,7 @@ input {
   margin-bottom: 2rem;
 }
 
-.login-button {
+.purple-button {
   font-size: 2rem;
   width: 20rem;
   height: 5rem;
@@ -94,7 +94,7 @@ input {
   transition: filter 0.2s;
 }
 
-.login-button:hover {
+.purple-button:hover {
   transition: filter 0.2s;
   filter: brightness(150%);
 }
@@ -144,46 +144,9 @@ span.register-text a {
   -webkit-text-fill-color: transparent;
 }
 
-/*Registro*/
-
-#container-register {
-  position: absolute;
-  width: 551px;
-  height: 595px;
-  left: 444px;
-  top: 214px;
-}
-
-#container-name {
-  position: absolute;
-  width: 240px;
-  height: 113px;
-  left: 444px;
-  top: 214px;
-}
-
-#container-surname {
-  position: absolute;
-  width: 240px;
-  height: 113px;
-  left: 755px;
-  top: 214px;
-}
-
-#container-email {
-  position: absolute;
-  width: 551px;
-  height: 113px;
-  left: 444px;
-  top: 364px;
-}
-
-#container-password {
-  position: absolute;
-  width: 551px;
-  height: 113px;
-  left: 444px;
-  top: 514px;
+.input-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .button-register {
