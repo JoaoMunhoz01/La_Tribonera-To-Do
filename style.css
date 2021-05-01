@@ -23,42 +23,8 @@ span {
   color: #FFFFFF;
 }
 
-.sidebar {
-  width: 600px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding-left: 30px;
-  padding-right: 30px;
-
-  background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
-}
-
-.container {
-  display: flex;
-}
-
-.container-vertical {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-
-  padding: 3rem;
-
-  justify-content: center;
-}
-
-#user-name {
-  font-size: 15rem;
-  font-weight: bold;
-}
-
-.text-gradient {
-  background: -webkit-linear-gradient(#B272F2, #6D8EF2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+span.register-text {
+  font-size: 1.6rem;
 }
 
 main {
@@ -95,6 +61,48 @@ input {
   margin-bottom: 2rem;
 }
 
+.sidebar {
+  width: 600px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+}
+
+.sidebar-sm {
+  width: 300px!important;
+}
+
+.container {
+  display: flex;
+}
+
+.container-vertical {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  padding: 3rem;
+
+  justify-content: center;
+}
+
+#user-name {
+  font-size: 15rem;
+  font-weight: bold;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(#B272F2, #6D8EF2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .purple-button {
   font-size: 2rem;
   font-family: 'Montserrat', sans-serif;
@@ -123,61 +131,14 @@ input {
   color: #fff;
 }
 
-span.register-text {
-  font-size: 1.6rem;
-}
-
-.sidebar-sm {
-  width: 300px!important;
-}
-
 .text-dark {
   color: #0C141C!important;
-}
-
-/*Layout para todos os botões de login e register*/
-
-.button-login-register {
-  font-size: 20px;
-  font-family: Montserrat;
-  color: white;
-  background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
-  border-radius: 2000px;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.text-register {
-  position: absolute;
-  width: 362px;
-  height: 24px;
-  left: 17%;
-  top: 100%;
-
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-
-  color: #FFFFFF;
-}
-
-.text-register a {
-  background-clip: border-box;
-  text-decoration: none;
-  background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
 }
-
-/********** CSS LUIZ ************/
 
 .block {
   width: 500px;
@@ -206,11 +167,9 @@ span.register-text {
   border-radius: 10px;
 }
 
-
-
 .arredonda {
   height: 30px;
-    -webkit-border-radius: 10px;
+  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
