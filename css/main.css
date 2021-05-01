@@ -1,0 +1,353 @@
+body {
+    margin: 0;
+    background-color: #0C141C;
+    font-family: Montserrat;
+    font-weight: ;
+}
+
+h2{
+   
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+
+
+#container-title {
+    position: absolute;
+    width: 627px;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+}
+
+#container-form {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #0C141C;
+}
+
+.description-welcome {
+    position: absolute;
+    width: 373px;
+    height: 61px;
+    left: 66px;
+    top: 363px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 61px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.title {
+    position: absolute;
+    width: 497px;
+    height: 173px;
+    left: 61px;
+    top: 340px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 150px;
+    line-height: 183px;
+
+    color: #0C141C;
+}
+
+.description {
+    position: absolute;
+    width: 506px;
+    height: 72px;
+    left: 60px;
+    top: 650px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+}
+
+#form {
+    position: absolute;
+    width: 551px;
+    height: 445px;
+    left: 53%;
+    top: 290px;
+
+}
+
+.email-input {
+    width: 100%;
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 20%;
+    bottom: 0%;
+
+}
+
+.input-form {
+    font-family: Montserrat;
+    font-size: 18px;
+    color: #0C141C;
+    outline: none;
+    height: 20px;
+    padding: 20px;
+    background: #FFFFFF;
+    border: 3px solid #AFAFAF;
+    box-sizing: border-box;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.password-input {
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 50%;
+    bottom: 90%;
+
+  
+}
+
+.text-email {
+    position: absolute;
+    left: 0%;
+    right: 6.35%;
+    top: 0%;
+    bottom: 61.06%;
+
+}
+
+.text-password {
+
+    position: absolute;
+    left: 0%;
+    right: 6.35%;
+    top: 30%;
+    bottom: 61.06%;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+
+.button-login {
+    position: absolute;
+    width: 230px;
+    height: 58.81px;
+    left: 27%;
+    top: 75%;
+
+}
+
+/*Layout para todos os botões de login e register*/
+
+.button-login-register {
+    font-size: 20px;
+    font-family: Montserrat;
+    color: white;
+    background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+    border-radius: 2000px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.text-register {
+    position: absolute;
+    width: 362px;
+    height: 24px;
+    left: 17%;
+    top: 100%;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+}
+
+.text-register a {
+    background-clip: border-box;
+    text-decoration: none;
+    background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Registro*/
+
+#container-register {
+    position: absolute;
+    width: 551px;
+    height: 595px;
+    left: 444px;
+    top: 214px;
+
+}
+
+#container-name {
+    position: absolute;
+    width: 240px;
+    height: 113px;
+    left: 444px;
+    top: 214px;
+
+}
+
+#container-surname {
+    position: absolute;
+    width: 240px;
+    height: 113px;
+    left: 755px;
+    top: 214px;
+
+}
+
+#container-email {
+    position: absolute;
+    width: 551px;
+    height: 113px;
+    left: 444px;
+    top: 364px;
+
+}
+
+#container-password {
+    position: absolute;
+    width: 551px;
+    height: 113px;
+    left: 444px;
+    top: 514px;
+
+}
+
+.button-register {
+    position: absolute;
+    width: 260px;
+    height: 58.81px;
+    left: 590px;
+    top: 689px;
+
+}
+
+
+
+/********** CSS LUIZ ************/
+
+.block {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.block h1 {
+    color: #fff;
+}
+
+.block h2 {
+    font-size: 25px;
+}
+
+.block button {
+    width: 70%;
+    height: 30px;
+    background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+    padding:5px;
+   margin:15px auto;
+    color:#fff;
+    -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+
+}
+
+
+
+.arredonda {
+    height: 30px;
+        -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.tarefas {
+    width: 70%;
+    height: 30px;
+    line-height: 30px;
+    background: -webkit-linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+    padding:5px;
+   margin:15px auto;
+    color:#fff;
+    -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+text-align: left;
+text-indent: 15px;
+
+}
+
+.tarefas input[type="image"] {
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin: 0 2px 0 2px;
+}
+
+.checkbox {
+    width: 25px;
+    height: 25px;
+    float:left;
+}
+
+.add {
+    width: 70%;
+    height: 30px;
+    line-height: 30px;
+   margin:0px auto;
+    color:#fff;
+    text-align: left;
+
+}
+
+.add input {
+    width:87%;
+}
+
+.add input[type="image"] {
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin: 0 2px 0 2px;
+}
