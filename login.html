@@ -12,9 +12,9 @@
 <body>
   <div class="container">
     <aside>
-      <div id="sidebar">
+      <div class="sidebar">
         <h2>Bem-Vindo ao</h2>
-        <h1>To Do</h1>
+        <h1 class="text-dark">To Do</h1>
         <span class="descricao">Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua.</span>
@@ -23,14 +23,20 @@
 
     <main>
       <form>
-        <label for="email">Email</label>
-        <input id="email" type="text" placeholder="Email">
-        <label for="password">Senha</label>
-        <input id="password" type="password" placeholder="Senha">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input id="email" type="text" placeholder="Email">
+        </div>
+
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input id="password" type="password" placeholder="Senha">
+        </div>
 
         <button class="purple-button">Login</button>
         <span class="register-text">
-          Ainda não é registrado? <a href="/register.html">Clique aqui</a>
+          Ainda não é registrado?
+          <a href="/register.html" class="text-gradient">Clique aqui</a>
         </span>
       </form>
     </main>
