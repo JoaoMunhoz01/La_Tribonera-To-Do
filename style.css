@@ -5,6 +5,7 @@ html, body {
   background-color: #0C141C;
   font-family: 'Montserrat', sans-serif;
   font-size: 62.5%;
+  height: 100%;
 }
 
 h1 {
@@ -100,6 +101,7 @@ select:focus {
 
 .sidebar-sm {
   width: 300px!important;
+  height: calc(100vh - 5.75rem);
 }
 
 .container {
@@ -109,9 +111,9 @@ select:focus {
 .container-vertical {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 5.75rem);
 
-  padding: 3rem;
+  padding: 0 3rem;
 }
 
 .justify-center {
@@ -124,6 +126,7 @@ select:focus {
 
 .title {
   font-size: 5rem;
+  margin-top: 2rem;
 }
 
 #user-name {
@@ -251,4 +254,30 @@ select:focus {
 .checkbox:checked {
   border: 3px solid #FFF;
   background: linear-gradient(180deg, #63F2B0 0%, #1ED9D9 100%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background-color: #fff;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar div {
+  display: flex;
+}
+
+.nav-item {
+  font-size: 3rem;
+  margin-left: 2rem;
+}
+
+.nav-item a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 300;
 }
