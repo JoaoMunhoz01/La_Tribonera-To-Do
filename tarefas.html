@@ -2,65 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="css/main.css">
-    <title>Tarefas</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+
+	<script defer src="node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+
+	<title>Tarefas</title>
 </head>
 
 <body>
-    
+	<div class="container-vertical align-center">
+		<h1 class="title">Tarefas</h1>
 
-    <div class="block">
+		<select id="list-select">
+			<option>Lista 1</option>
+			<option>Lista 2</option>
+			<option>Lista 3</option>
+		</select>
 
-    	<h1>Tarefas</h1>
+		<input type="text" placeholder="🔍 Pesquisar" class="search-box">
 
-    	<select id="lista" name="lista" class="arredonda" style="width: 60%">
-    		<option value="" disabled selected>Nome da Lista</option>
-  <option value="nome1">Nome 1</option>
-  <option value="nome2">Nome 2</option>
-  <option value="nome3">Nome 3</option>
-</select>
+		<div class="list">
+			<div class="white-card">
+				<input type="text" placeholder="Adicionar Item">
+				<i class="fas fa-plus add-icon"></i>
+			</div>
 
-</br></br>
+			<div class="purple-card">
+				<div class="left">
+					<input type="checkbox" class="checkbox">
+					<span>Nome da tarefa</span>
+				</div>
 
-<input type="text" placeholder="Pesquisar" name="pesquisar" id="pesquisa" class="arredonda">
+				<div class="right">
+					<span>
+						<i class="task-icons fas fa-pencil-alt"></i>
+						<i class="task-icons fas fa-trash"></i>
+					</span>
+				</div>
+			</div>
 
-</br></br>
+			<div class="purple-card">
+				<div class="left">
+					<input type="checkbox" class="checkbox">
+					<span>Nome da tarefa</span>
+				</div>
 
-<div class="add">
-	<input type="text" name="add" id="add" placeholder="Adicionar item" class="arredonda">
-	<input type="image" src="img/plus.png" />
-</div>
+				<div class="right">
+					<span>
+						<i class="task-icons fas fa-pencil-alt"></i>
+						<i class="task-icons fas fa-trash"></i>
+					</span>
+				</div>
+			</div>
 
+			<div class="purple-card">
+				<div class="left">
+					<input type="checkbox" class="checkbox">
+					<span>Nome da tarefa</span>
+				</div>
 
+				<div class="right">
+					<span>
+						<i class="task-icons fas fa-pencil-alt"></i>
+						<i class="task-icons fas fa-trash"></i>
+					</span>
+				</div>
+			</div>
+		</div>
 
-<div class="tarefas">
-	<input type="checkbox" id="tarefa" name="tarefa" class="checkbox"> Nome da tarefa <input type="image" src="img/trash.png" /> <input type="image" src="img/pen.png" />
-</div>
-<div class="tarefas">
-	<input type="checkbox" id="tarefa" name="tarefa" class="checkbox"> Nome da tarefa <input type="image" src="img/trash.png" /> <input type="image" src="img/pen.png" />
-</div>
+		<h3>Concluídas</h3>
 
-<div class="tarefas">
-	<input type="checkbox" id="tarefa" name="tarefa" class="checkbox"> Nome da tarefa <input type="image" src="img/trash.png" /> <input type="image" src="img/pen.png" />
-</div>
+		<div class="list">
+			<div class="purple-card">
+				<div class="left">
+					<input type="checkbox" class="checkbox" checked>
+					<span>Nome da tarefa</span>
+				</div>
 
-<h2>Concluídas</h2>
+				<div class="right">
+					<span>
+						<i class="task-icons fas fa-pencil-alt"></i>
+						<i class="task-icons fas fa-trash"></i>
+					</span>
+				</div>
+			</div>
 
-<div class="tarefas">
-	<input type="checkbox" id="tarefa" checked="checked" name="tarefa" class="checkbox"> Nome da tarefa <input type="image" src="img/trash.png" /> <input type="image" src="img/pen.png" />
-</div>
+			<div class="purple-card">
+				<div class="left">
+					<input type="checkbox" class="checkbox" checked>
+					<span>Nome da tarefa</span>
+				</div>
 
-<div class="tarefas">
-	<input type="checkbox" id="tarefa" checked="checked" name="tarefa" class="checkbox"> Nome da tarefa <input type="image" src="img/trash.png" /> <input type="image" src="img/pen.png" />   
-	 </div>
-    
-      
-   
+				<div class="right">
+					<span>
+						<i class="task-icons fas fa-pencil-alt"></i>
+						<i class="task-icons fas fa-trash"></i>
+					</span>
+				</div>
+			</div>
 
+			<div class="purple-card">
+				<div class="left">
+					<input type="checkbox" class="checkbox" checked>
+					<span>Nome da tarefa</span>
+				</div>
+
+				<div class="right">
+					<span>
+						<i class="task-icons fas fa-pencil-alt"></i>
+						<i class="task-icons fas fa-trash"></i>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 
