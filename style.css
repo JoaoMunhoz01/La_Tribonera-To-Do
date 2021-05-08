@@ -182,11 +182,7 @@ select:focus {
   border: 3px solid #B272F2;
 }
 
-.list {
-  margin-bottom: 2rem;
-}
-
-.white-card {
+li.white {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -199,13 +195,13 @@ select:focus {
   margin: 1.5rem;
 }
 
-.white-card > input {
+li.white > input {
   margin: auto 0;
   width: 100%;
   border: none;
 }
 
-.purple-card {
+li.purple {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -218,13 +214,13 @@ select:focus {
   margin: 1.5rem;
 }
 
-.purple-card > * {
+li.purple > * {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.purple-card > .left > * {
+li.purple > .left > * {
   margin-right: 1rem;
 }
 
