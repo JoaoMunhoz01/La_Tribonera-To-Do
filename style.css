@@ -140,6 +140,22 @@ select:focus {
   -webkit-text-fill-color: transparent;
 }
 
+.white-button {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  width: 20rem;
+  height: 5rem;
+  color: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  font-weight: 500;
+  background: white;
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  transition: filter 0.2s;
+}
+
 .purple-button {
   font-size: 2rem;
   font-family: 'Montserrat', sans-serif;
@@ -150,11 +166,9 @@ select:focus {
   background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
   border-radius: 100px;
   cursor: pointer;
-
   border: none;
   outline: none;
   margin-bottom: 1rem;
-
   transition: filter 0.2s;
 }
 
@@ -205,12 +219,22 @@ select:focus {
   border: none;
 }
 
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem 1rem 1rem;
+  border-radius: 2rem;
+  width: 33.33%;
+  background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  margin: 1.5rem;
+}
+
 .purple-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem 1rem 1rem;
-
   border-radius: 2rem;
   width: 70rem;
   background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
