@@ -13,7 +13,7 @@ Este projeto utiliza a licença MIT. Ela pode ser encontrada no arquivo LICENSE.
 
 ## Requisitos
 
-- Última versão do NPM
+- Última versão do yarn
 - Computador com Linux
 
 Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
@@ -31,7 +31,7 @@ Para fazer o deploy da aplicação siga os seguintes passos:
 Linux e/ou macOS:
 
 ```
-$ npm i
+$ yarn install
 ```
 
 Windows? (opcional):
