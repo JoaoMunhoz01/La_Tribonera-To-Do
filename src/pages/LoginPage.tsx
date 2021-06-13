@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../components/login/Form";
+import LoginForm from "../components/login/LoginForm";
 
 const LoginPage: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const LoginPage: React.FC = () => {
       </aside>
 
       <main>
-        <Form />
+        <LoginForm />
       </main>
     </div>
   );

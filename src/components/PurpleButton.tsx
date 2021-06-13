@@ -7,7 +7,7 @@ interface Props {
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const BotaoRoxo: React.FC<Props> = (props) => {
+const PurpleButton: React.FC<Props> = (props) => {
   const inside = props.link ? (
     <Link to={props.link}>{props.texto}</Link>
   ) : (
@@ -21,4 +21,4 @@ const BotaoRoxo: React.FC<Props> = (props) => {
   );
 };
 
-export default BotaoRoxo;
+export default PurpleButton;

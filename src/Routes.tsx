@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const Routes: React.FC = () => {
   return (
@@ -15,6 +16,9 @@ const Routes: React.FC = () => {
           <LoginPage />
         </Route>
 
+        <Route path="/register">
+          <RegisterPage />
+        </Route>
 
         <Route path="*">
           <h1>NOT FOUND</h1>
