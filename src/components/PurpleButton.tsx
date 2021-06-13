@@ -1,22 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 interface Props {
-  texto: string;
-  link?: string;
+  texto?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const PurpleButton: React.FC<Props> = (props) => {
-  const inside = props.link ? (
-    <Link to={props.link}>{props.texto}</Link>
-  ) : (
-    <div>{props.texto}</div>
-  );
-
   return (
     <button className="purple-button" onClick={props.onClick}>
-      {inside}
+      {(props.texto)?? props.children}
     </button>
   );
 };
