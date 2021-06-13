@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import HomePage from "./pages/HomePage";
+import ListsPage from "./pages/ListsPage";
 
 const Routes: React.FC = () => {
   return (
@@ -18,6 +19,10 @@ const Routes: React.FC = () => {
 
         <Route path="/register">
           <RegisterPage />
+        </Route>
+
+        <Route path="/listas" exact>
+          <ListsPage />
         </Route>
 
         <Route path="*">
