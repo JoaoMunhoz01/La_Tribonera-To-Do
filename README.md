@@ -32,6 +32,7 @@ Linux e/ou macOS:
 
 ```
 $ yarn install
+$ yarn start
 ```
 
 Windows? (opcional):
