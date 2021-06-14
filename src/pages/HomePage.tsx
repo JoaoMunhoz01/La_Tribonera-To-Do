@@ -4,7 +4,7 @@ import HomeSidebar from "../components/home/HomeSidebar";
 import Navbar from "../components/Navbar";
 
 const HomePage = () => {
-  let [nome, setNome] = useState("Nome");
+  let [nome] = useState("Nome");
 
   return (
     <div>

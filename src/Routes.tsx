@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import HomePage from "./pages/HomePage";
 import ListsPage from "./pages/ListsPage";
+import CalendarPage from "./pages/CalendarPage";
 
 const Routes: React.FC = () => {
   return (
@@ -17,12 +18,16 @@ const Routes: React.FC = () => {
           <LoginPage />
         </Route>
 
-        <Route path="/register">
+        <Route path="/register" exact>
           <RegisterPage />
         </Route>
 
         <Route path="/listas" exact>
           <ListsPage />
+        </Route>
+
+        <Route path="/calendario" exact>
+          <CalendarPage />
         </Route>
 
         <Route path="*">
