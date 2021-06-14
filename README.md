@@ -2,8 +2,9 @@
 
 <!--- Exemplos de badges. Acesse https://shields.io para outras opções. Você pode querer incluir informações de dependencias, build, testes, licença, etc. --->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/hsborges/progweb-template)
-![GitHub contributors](https://img.shields.io/github/contributors/hsborges/progweb-template)
+![GitHub repo size](https://img.shields.io/github/languages/code-size/JoaoMunhoz01/La_Tribonera-To-Do)
+![GitHub contributors](https://img.shields.io/github/contributors/JoaoMunhoz01/La_Tribonera-To-Do)
+![GitHub license](https://img.shields.io/github/license/JoaoMunhoz01/La_Tribonera-To-Do)
 
 La Tribonera To-Do é uma aplicação web...
 
