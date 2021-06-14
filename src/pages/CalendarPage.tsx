@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import CalendarCard from "../components/calendar/CalendarCard";
 import Navbar from "../components/Navbar";
+import WhiteButton from "../components/WhiteButton";
 import Task from "../Task";
 
 const tarefas_hoje = [
@@ -25,9 +27,9 @@ const CalendarPage = () => {
       <div className="container-vertical align-center">
         <h1 className="title">Calendário</h1>
 
-        <button className="white-button">
-          <a href="tarefas.html">Nova tarefa</a>
-        </button>
+        <WhiteButton>
+          <Link to="/tarefas">Nova tarefa</Link>
+        </WhiteButton>
 
         <div className="container">
           <CalendarCard title="Hoje" tasks={tarefas_hoje}/>

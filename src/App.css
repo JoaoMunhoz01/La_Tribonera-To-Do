@@ -288,6 +288,7 @@ li.purple > .left > * {
 
   width: 20rem;
   height: 5rem;
+  flex-shrink: 0;
 
   font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
