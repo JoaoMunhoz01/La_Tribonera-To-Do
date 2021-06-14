@@ -5,6 +5,7 @@ import RegisterPage from "./pages/RegisterPage";
 import HomePage from "./pages/HomePage";
 import ListsPage from "./pages/ListsPage";
 import CalendarPage from "./pages/CalendarPage";
+import TasksPage from "./pages/TasksPage";
 
 const Routes: React.FC = () => {
   return (
@@ -28,6 +29,10 @@ const Routes: React.FC = () => {
 
         <Route path="/calendario" exact>
           <CalendarPage />
+        </Route>
+
+        <Route path="/tarefas" exact>
+          <TasksPage />
         </Route>
 
         <Route path="*">
