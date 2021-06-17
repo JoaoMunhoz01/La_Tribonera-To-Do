@@ -14,8 +14,8 @@ Este projeto utiliza a licença MIT. Ela pode ser encontrada no arquivo LICENSE.
 
 ## Requisitos
 
-- Última versão do yarn
-- Computador com Linux
+- Yarn
+- Node.js
 
 Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
 
@@ -33,7 +33,7 @@ Linux e/ou macOS:
 
 ```
 $ yarn install
-$ yarn start
+$ yarn build
 ```
 
 Windows? (opcional):
