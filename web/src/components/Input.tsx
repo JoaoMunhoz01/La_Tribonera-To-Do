@@ -2,6 +2,7 @@ interface Props {
   nome: string;
   type?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  autocomplete?: string;
 }
 
 const Input: React.FC<Props> = (props) => {
@@ -13,6 +14,7 @@ const Input: React.FC<Props> = (props) => {
         type={props.type?? "text"}
         placeholder={props.nome}
         onChange={props.onChange?? (e => {})}
+        autoComplete={props.autocomplete?? ''}
         required
       />
     </div>

@@ -56,14 +56,23 @@ const RegisterForm = () => {
     <form>
       <Alert text={alertText} show={showAlert} />
 
-      <Input onChange={(e) => setName(e.target.value)} nome="Nome" />
+      <Input
+        onChange={(e) => setName(e.target.value)}
+        nome="Nome"
+        autocomplete="given-name"
+      />
 
-      <Input onChange={(e) => setLastName(e.target.value)} nome="Sobrenome" />
+      <Input
+        onChange={(e) => setLastName(e.target.value)}
+        nome="Sobrenome"
+        autocomplete="family-name"
+      />
 
       <Input
         onChange={(e) => setEmail(e.target.value)}
         type="email"
         nome="Email"
+        autocomplete="email"
       />
 
       <Input
