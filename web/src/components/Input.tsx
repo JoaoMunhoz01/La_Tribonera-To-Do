@@ -1,6 +1,7 @@
 interface Props {
   nome: string;
   type?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input: React.FC<Props> = (props) => {
@@ -11,6 +12,7 @@ const Input: React.FC<Props> = (props) => {
         id={props.nome}
         type={props.type?? "text"}
         placeholder={props.nome}
+        onChange={props.onChange?? (e => {})}
         required
       />
     </div>

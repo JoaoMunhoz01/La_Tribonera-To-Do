@@ -5,15 +5,18 @@ import { createConnection } from "typeorm";
 import LoginController from "./controllers/LoginController";
 import cookieParser from 'cookie-parser';
 import { checkIfValidToken } from './auth';
+import cors from 'cors';
 // import ListController from "./controllers/ListController";
 
 const app = express();
 
 app.use(cookieParser());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.post('/api/registrar', async (req, res) => {
-  res.send(LoginController.register(req));
+  res.send(await LoginController.register(req));
 });
 
 app.post('/api/login', async (req, res) => {

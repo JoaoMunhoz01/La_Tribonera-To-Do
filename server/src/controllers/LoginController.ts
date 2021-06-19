@@ -10,7 +10,13 @@ class LoginController {
       return false;
 
     const hashSenha = await hash(password, 12);
-    User.insert({ name, lastName, email, password: hashSenha });
+
+    try {
+      await User.insert({ name, lastName, email, password: hashSenha });
+    } catch {
+      return false;
+    }
+
     return true;
   };
 
