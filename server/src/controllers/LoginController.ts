@@ -1,14 +1,9 @@
 import { User } from '../models/User';
 import { compare, hash } from 'bcrypt';
-import { sign } from 'jsonwebtoken';
-
-interface LoginResponse {
-  success: boolean;
-  token?: string;
-};
-
+import { createToken } from '../auth';
+import { Request, Response } from 'express';
 class LoginController {
-  static register = async (req: any) => {
+  static register = async (req: Request) => {
     let { name, lastName, email, password } = req.body;
 
     if (await User.findOne({ email }))
@@ -19,32 +14,24 @@ class LoginController {
     return true;
   };
 
-  static login = async (req: any, res: any) => {
+  static login = async (req: Request, res: Response) => {
     let { email, password } = req.body;
-    let response : LoginResponse = {success: false};
 
     const user = await User.findOne({ email });
-    if (!user) {
-      res.cookie('access', response);
-      return response;
-    }
+    if (!user) return false;
 
     const valid = await compare(password, user.password);
 
-    if (valid) {
-      response.success = true;
-      response.token = LoginController.gerarToken(email, user.name);
-    }
+    if (!valid) return false;
 
-    res.cookie('access', response);
-    return response;
+    res.cookie('access', createToken(user));
+    return true;
   }
 
-  private static gerarToken = (email: string, name: string) => {
-    let payload = { email, name };
-    return sign(payload, process.env.TOKEN_KEY, { expiresIn: '10min' });
+  static logout = async (res: Response) => {
+      res.clearCookie('access');
+      res.send(true);
   }
-
 };
 
 export default LoginController;

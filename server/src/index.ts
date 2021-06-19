@@ -1,10 +1,10 @@
-require('dotenv').config();
+import 'dotenv/config';
 import "reflect-metadata";
 import express from 'express';
 import { createConnection } from "typeorm";
 import LoginController from "./controllers/LoginController";
-import { verify } from "jsonwebtoken";
 import cookieParser from 'cookie-parser';
+import { checkIfValidToken } from './auth';
 // import ListController from "./controllers/ListController";
 
 const app = express();
@@ -20,16 +20,12 @@ app.post('/api/login', async (req, res) => {
   res.send(await LoginController.login(req, res));
 });
 
-app.post('/check', async (req, res) => {
-  res.send(req.cookies.access);
+app.post('/api/logout', async (req, res) => {
+  res.send(await LoginController.logout(res));
+});
 
-  // let token = req.body.token;
-  // try {
-  //   verify(token, process.env.TOKEN_KEY)
-  //   res.send('valido');
-  // } catch {
-  //   res.send("invalido");
-  // }
+app.post('/api/check_token', async (req, res) => {
+  res.send(checkIfValidToken(req.cookies.access));
 });
 
 // app.post('/api/lists/create', async (req, res) => {
