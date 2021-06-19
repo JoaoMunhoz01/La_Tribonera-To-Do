@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import PurpleButton from "../PurpleButton";
 import Input from "../Input";
 import LoginText from "./LoginText";
@@ -13,43 +13,46 @@ const RegisterForm = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [alertText, setAlertText] = useState("");
 
+  const isValidFormData = () => {
+    if (email === "" || password === "" || name === "" || lastName === "")
+      return false;
+    return true;
+  };
+
+  const showInvalidFormAlert = () => {
+    setAlertText("Preencha todos os campos.");
+    showAlertAndHide();
+  };
+
+  const showResponseAlert = (res: AxiosResponse) => {
+    let text = "Usuário cadastrado com sucesso.";
+
+    if (!res.data) text = "Usuário já cadastrado.";
+
+    setAlertText(text);
+    showAlertAndHide();
+  };
+
+  const showAlertAndHide = () => {
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 2500);
+  };
+
   const sendForm = () => {
-    let data = {
-      email,
-      password,
-      name,
-      lastName,
-    };
+    let data = { email, password, name, lastName };
 
-    if (
-      data.email === "" ||
-      data.password === "" ||
-      data.name === "" ||
-      data.lastName === ""
-    ) {
-      setAlertText("Preencha todos os campos.");
-      setShowAlert(true);
-
-      setTimeout(() => setShowAlert(false), 2500);
-
+    if (!isValidFormData()) {
+      showInvalidFormAlert();
       return;
     }
 
     axios
       .post("http://localhost:3000/api/registrar", data)
-      .then((res) => {
-        console.log(res.data);
-
-        if (res.data) {
-          setAlertText("Usuário cadastrado com sucesso.");
-        } else {
-          setAlertText("Usuário já cadastrado.");
-        }
-
-        setShowAlert(true);
-        setTimeout(() => setShowAlert(false), 2500);
-      })
-      .catch(() => setAlertText("Erro de comunicação com o servidor."));
+      .then((res) => showResponseAlert(res))
+      .catch(() => {
+        setAlertText("Erro de comunicação com o servidor.");
+        showAlertAndHide();
+      });
   };
 
   return (
