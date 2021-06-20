@@ -21,7 +21,7 @@ const Navbar = () => {
             <Link to="/calendario">Calendário</Link>
           </li>
           <li className="nav-item">
-            <Link to="/login">Sair</Link>
+            <Link to="/logout">Sair</Link>
           </li>
         </div>
       </ul>
