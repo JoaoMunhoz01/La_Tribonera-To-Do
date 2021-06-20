@@ -4,7 +4,7 @@ const RegisterText = () => {
   return (
     <span className="register-text">
       Ainda não é registrado?
-      <Link to="/register" className="text-gradient">
+      <Link to="/registrar" className="text-gradient">
         Clique aqui
       </Link>
     </span>

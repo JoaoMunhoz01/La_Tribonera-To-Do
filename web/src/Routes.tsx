@@ -6,37 +6,43 @@ import HomePage from "./pages/HomePage";
 import ListsPage from "./pages/ListsPage";
 import CalendarPage from "./pages/CalendarPage";
 import TasksPage from "./pages/TasksPage";
+import PrivateRoute from "./components/PrivateRoute";
+import Logout from "./components/Logout";
 
 const Routes: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact>
+        <PrivateRoute path="/" exact>
           <HomePage />
-        </Route>
+        </PrivateRoute>
 
         <Route path="/login" exact>
           <LoginPage />
         </Route>
 
-        <Route path="/register" exact>
+        <Route path="/registrar" exact>
           <RegisterPage />
         </Route>
 
-        <Route path="/listas" exact>
+        <PrivateRoute path="/listas" exact>
           <ListsPage />
-        </Route>
+        </PrivateRoute>
 
-        <Route path="/calendario" exact>
+        <PrivateRoute path="/calendario" exact>
           <CalendarPage />
-        </Route>
+        </PrivateRoute>
 
-        <Route path="/tarefas" exact>
+        <PrivateRoute path="/tarefas" exact>
           <TasksPage />
+        </PrivateRoute>
+
+        <Route exact path="/logout">
+          <Logout />
         </Route>
 
         <Route path="*">
-          <h1>NOT FOUND</h1>
+          <h1>Página não encontrada</h1>
         </Route>
       </Switch>
     </BrowserRouter>

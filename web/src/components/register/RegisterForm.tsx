@@ -3,7 +3,7 @@ import PurpleButton from "../PurpleButton";
 import Input from "../Input";
 import LoginText from "./LoginText";
 import React, { useState } from "react";
-import Alert from "./Alert";
+import Alert from "../Alert";
 
 const RegisterForm = () => {
   const [name, setName] = useState("");
@@ -59,30 +59,22 @@ const RegisterForm = () => {
     <form>
       <Alert text={alertText} show={showAlert} />
 
-      <Input
-        onChange={(e) => setName(e.target.value)}
-        nome="Nome"
-        autocomplete="given-name"
-      />
+      <Input onChange={setName} nome="Nome" autocomplete="given-name" />
 
       <Input
-        onChange={(e) => setLastName(e.target.value)}
+        onChange={setLastName}
         nome="Sobrenome"
         autocomplete="family-name"
       />
 
       <Input
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={setEmail}
         type="email"
         nome="Email"
         autocomplete="email"
       />
 
-      <Input
-        onChange={(e) => setPassword(e.target.value)}
-        type="password"
-        nome="Senha"
-      />
+      <Input onChange={setPassword} type="password" nome="Senha" />
 
       <PurpleButton
         onClick={(e: React.FormEvent<HTMLButtonElement>) => {
