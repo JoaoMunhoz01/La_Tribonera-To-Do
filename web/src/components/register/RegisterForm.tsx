@@ -47,7 +47,7 @@ const RegisterForm = () => {
     }
 
     axios
-      .post("http://localhost:3000/api/registrar", data)
+      .post("/api/registrar", data)
       .then((res) => showResponseAlert(res))
       .catch(() => {
         setAlertText("Erro de comunicação com o servidor.");
