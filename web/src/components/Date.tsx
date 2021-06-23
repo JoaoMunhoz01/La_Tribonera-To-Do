@@ -1,75 +1,232 @@
 import React, { useState } from "react";
 import Render from "react-dom";
 
+
    function dataHoje() {
-        var hoje = new Date();
+        var data = new Date();
         var dia = hoje.getDate();
-        var mes = hoje.getMonth();
+        var mes = (hoje.getMonth()+1);
         var ano = hoje.getFullYear();
 
-        hoje = ano + '-' + mes + '-' + dia;
-        return hoje;
+        data = ano + '-' + mes + '-' + dia;
+        return data;
     }
 
-    function dataAmanha(hoje) {
+    function dataAmanha() {
         
-        var dia = hoje.getDate();
-        var mes = hoje.getMonth();
-        var amanha = new Date();
+        function diasNoMes(mes, ano) {
+ 	    var data = new Date(ano, mes, 0);
+ 	    return data.getDate();
+		}
+
+		var data = new Date();
+        var dia = data.getDate();
+        var mes = (data.getMonth()+1);
+        var ano = data.getFullYear();
+
+        hoje = ano + '-' + mes + '-' + dia;
+       
+        var amanha = new Date()
         var dia_amanha;
         var mes_amanha;
-
-        if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12 && dia == 31) {
-            dia_amanha = 1;
-        }
-        else if (mes == 2 && dia == 28) {
-            dia_amanha = 1;
-        }
-        else if (mes == 1 || mes == 4 || mes == 6 || mes == 9 || mes == 11 && dia == 30) {
-            dia_amanha = 1;
-        }
-
-        if (mes == 12) {
-            mes_amanha = 1;
-            ano = (hoje.getFullYear + 1)
+        var ano_amanha;
+       
+        if(dia == diasNoMes(mes, ano)){
+          dia=1
         }
         else {
-            mes_amanha = mes + 1;
+           dia = dia+1;
         }
-
-        amanha = ano + '-' + mes_amanha + '-' + dia_amanha;
-        return amanha;
+       
+        if(mes == 12){
+           mes = 1;
+           ano = ano+1;
+        }
+       
+        data = ano + '-' + mes + '-' + dia;
+      
+       	return amanha;
     }
 
 
 
-    function terceiroDia(amanha) {
-        var terceiroDia = new Date();
-        terceiroDia = dataAmanha(amanha);
-        return terceiroDia;
+    function terceiroDia() {
+        var data = new Date();
+        var dia = 31;//data.getDate();
+        var mes = 12;//(data.getMonth()+1);
+        var ano = 2021;//data.getFullYear();
+
+        hoje = ano + '-' + mes + '-' + dia;
+
+		for(var i = 0; i <=1; i++){
+  
+      		  function diasNoMes(mes, ano) {
+ 	  		    var data = new Date(ano, mes, 0);
+ 	  		    return data.getDate();
+	   		  }
+       
+        	var amanha = new Date()
+        	var dia_amanha;
+        	var mes_amanha;
+        	var ano_amanha;
+       
+        	if(dia == diasNoMes(mes, ano)){
+        	  dia=1
+        	}
+        	else {
+        	   dia = dia+1;
+        	}
+       
+        	if(mes == 12){
+        	   mes = 1;
+        	   ano = ano+1;
+        	}
+       
+        	data = ano + '-' + mes + '-' + dia;
+		}
     }
 
-    function quartoDia(terceiro_dia) {
-        var quartoDia = new Date();
-        quartoDia = dataAmanha(terceiroDia);
-        return quartoDia;
+    function quartoDia() {
+        var data = new Date();
+        var dia = 31;//data.getDate();
+        var mes = 12;//(data.getMonth()+1);
+        var ano = 2021;//data.getFullYear();
+
+        hoje = ano + '-' + mes + '-' + dia;
+
+		for(var i = 0; i <=2; i++){
+  
+      		  function diasNoMes(mes, ano) {
+ 	  		    var data = new Date(ano, mes, 0);
+ 	  		    return data.getDate();
+	   		  }
+       
+        	var amanha = new Date()
+        	var dia_amanha;
+        	var mes_amanha;
+        	var ano_amanha;
+       
+        	if(dia == diasNoMes(mes, ano)){
+        	  dia=1
+        	}
+        	else {
+        	   dia = dia+1;
+        	}
+       
+        	if(mes == 12){
+        	   mes = 1;
+        	   ano = ano+1;
+        	}
+       
+        	data = ano + '-' + mes + '-' + dia;
+		}
     }
 
-    function quintoDia(quarto_dia) {
-        var quintoDia = new Date();
-        quintoDia = dataAmanha(quartoDia);
-        return quintoDia;
+    function quintoDia() {
+        var data = new Date();
+        var dia = 31;//data.getDate();
+        var mes = 12;//(data.getMonth()+1);
+        var ano = 2021;//data.getFullYear();
+
+        hoje = ano + '-' + mes + '-' + dia;
+
+		for(var i = 0; i <=3; i++){
+  
+      		  function diasNoMes(mes, ano) {
+ 	  		    var data = new Date(ano, mes, 0);
+ 	  		    return data.getDate();
+	   		  }
+       
+        	var amanha = new Date()
+        	var dia_amanha;
+        	var mes_amanha;
+        	var ano_amanha;
+       
+        	if(dia == diasNoMes(mes, ano)){
+        	  dia=1
+        	}
+        	else {
+        	   dia = dia+1;
+        	}
+       
+        	if(mes == 12){
+        	   mes = 1;
+        	   ano = ano+1;
+        	}
+       
+        	data = ano + '-' + mes + '-' + dia;
+		}
     }
 
-    function sextoDia(quinto_dia) {
-        var sextoDia = new Date();
-        sextoDia = dataAmanha(quintoDia);
-        return sextoDia;
+    function sextoDia() {
+        var data = new Date();
+        var dia = 31;//data.getDate();
+        var mes = 12;//(data.getMonth()+1);
+        var ano = 2021;//data.getFullYear();
+
+        hoje = ano + '-' + mes + '-' + dia;
+
+		for(var i = 0; i <=4; i++){
+  
+      		  function diasNoMes(mes, ano) {
+ 	  		    var data = new Date(ano, mes, 0);
+ 	  		    return data.getDate();
+	   		  }
+       
+        	var amanha = new Date()
+        	var dia_amanha;
+        	var mes_amanha;
+        	var ano_amanha;
+       
+        	if(dia == diasNoMes(mes, ano)){
+        	  dia=1
+        	}
+        	else {
+        	   dia = dia+1;
+        	}
+       
+        	if(mes == 12){
+        	   mes = 1;
+        	   ano = ano+1;
+        	}
+       
+        	data = ano + '-' + mes + '-' + dia;
+		}
     }
 
-    function setimoDia(sexto_dia) {
-        var setimoDia = new Date();
-        setimoDia = dataAmanha(sextoDia);
-        return setimoDia;
+    function setimoDia() {
+        var data = new Date();
+        var dia = 31;//data.getDate();
+        var mes = 12;//(data.getMonth()+1);
+        var ano = 2021;//data.getFullYear();
+
+        hoje = ano + '-' + mes + '-' + dia;
+
+		for(var i = 0; i <=5; i++){
+  
+      		  function diasNoMes(mes, ano) {
+ 	  		    var data = new Date(ano, mes, 0);
+ 	  		    return data.getDate();
+	   		  }
+       
+        	var amanha = new Date()
+        	var dia_amanha;
+        	var mes_amanha;
+        	var ano_amanha;
+       
+        	if(dia == diasNoMes(mes, ano)){
+        	  dia=1
+        	}
+        	else {
+        	   dia = dia+1;
+        	}
+       
+        	if(mes == 12){
+        	   mes = 1;
+        	   ano = ano+1;
+        	}
+       
+        	data = ano + '-' + mes + '-' + dia;
+		}
     }
     
