@@ -45,7 +45,7 @@ import Render from "react-dom";
        
         data = ano + '-' + mes + '-' + dia;
       
-       	return amanha;
+       	return data;
     }
 
 
@@ -84,6 +84,7 @@ import Render from "react-dom";
        
         	data = ano + '-' + mes + '-' + dia;
 		}
+	    return data;
     }
 
     function quartoDia() {
@@ -120,6 +121,7 @@ import Render from "react-dom";
        
         	data = ano + '-' + mes + '-' + dia;
 		}
+	    return data;
     }
 
     function quintoDia() {
@@ -156,6 +158,7 @@ import Render from "react-dom";
        
         	data = ano + '-' + mes + '-' + dia;
 		}
+	    return data;
     }
 
     function sextoDia() {
@@ -192,6 +195,7 @@ import Render from "react-dom";
        
         	data = ano + '-' + mes + '-' + dia;
 		}
+	    return data;
     }
 
     function setimoDia() {
@@ -228,5 +232,6 @@ import Render from "react-dom";
        
         	data = ano + '-' + mes + '-' + dia;
 		}
+	    return data;
     }
     
