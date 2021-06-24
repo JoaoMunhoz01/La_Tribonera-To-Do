@@ -19,7 +19,7 @@ import Render from "react-dom";
  	    return dias.getDate();
 	}
 
-		var data = new Date();
+	var data = new Date();
         var dia = data.getDate();
         var mes = (data.getMonth()+1);
         var ano = data.getFullYear();
@@ -29,21 +29,20 @@ import Render from "react-dom";
         var amanha = new Date()
         var dia_amanha;
         var mes_amanha;
-        var ano_amanha;
+	var ano_amanha;
        
         if(dia == diasNoMes(mes, ano)){
           dia=1
-        }
+          mes = mes+1;
+       }
         else {
-           dia = dia+1;
+          dia = dia+1;
         }
        
-        if(mes == 12){
-           mes = 1;
-           ano = ano+1;
+        if(mes == 13){
+        	mes = 1;
+        	ano = ano+1;
         }
-	else
-	   mes = mes+1;
        
         data = ano + '-' + mes + '-' + dia;
       
@@ -61,35 +60,36 @@ import Render from "react-dom";
         data = ano + '-' + mes + '-' + dia;
 	    
 	function diasNoMes(mes, ano) {
- 	  		    var dias = new Date(ano, mes, 0);
- 	  		    return dias.getDate();
-		}
+ 	  	var dias = new Date(ano, mes, 0);
+ 	  	return dias.getDate();
+	}
 
 		for(var i = 0; i <=1; i++){
   
         	var amanha = new Date()
-        	var dia_amanha;
+       		var dia_amanha;
         	var mes_amanha;
-        	var ano_amanha;
+		var ano_amanha;
        
         	if(dia == diasNoMes(mes, ano)){
-        	  dia=1
-        	}
+         		dia=1
+          		mes = mes+1;
+      		 }
         	else {
-        	   dia = dia+1;
+          		dia = dia+1;
         	}
        
-        	if(mes == 12){
-        	   mes = 1;
-        	   ano = ano+1;
-        	}
-		else
-		   mes = mes+1;
-       
-        	data = ano + '-' + mes + '-' + dia;
+        	if(mes == 13){
+        		mes = 1;
+        		ano = ano+1;
 		}
-	    return data;
+        }
+       
+        data = ano + '-' + mes + '-' + dia;
+      
+       	return data;
     }
+
 
     function quartoDia() {
        var data = new Date();
@@ -102,32 +102,32 @@ import Render from "react-dom";
 	    function diasNoMes(mes, ano) {
  	  		    var dias = new Date(ano, mes, 0);
  	  		    return dias.getDate();
-	   	}
+	    }
 
 		for(var i = 0; i <=2; i++){
   
         	var amanha = new Date()
-        	var dia_amanha;
+       		var dia_amanha;
         	var mes_amanha;
-        	var ano_amanha;
+		var ano_amanha;
        
         	if(dia == diasNoMes(mes, ano)){
-        	  dia=1
-        	}
+         		dia=1
+          		mes = mes+1;
+      		 }
         	else {
-        	   dia = dia+1;
+          		dia = dia+1;
         	}
        
-        	if(mes == 12){
-        	   mes = 1;
-        	   ano = ano+1;
-        	}
-		else
-		   mes = mes+1;
-       
-        	data = ano + '-' + mes + '-' + dia;
+        	if(mes == 13){
+        		mes = 1;
+        		ano = ano+1;
 		}
-	    return data;
+        }
+       
+        data = ano + '-' + mes + '-' + dia;
+	}
+	return data;
     }
 
     function quintoDia() {
@@ -137,36 +137,36 @@ import Render from "react-dom";
         var ano = data.getFullYear();
 
         data = ano + '-' + mes + '-' + dia;
+	
+	function diasNoMes(mes, ano) {
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
+	}
 
 		for(var i = 0; i <=3; i++){
   
-      		  function diasNoMes(mes, ano) {
- 	  		    var dias = new Date(ano, mes, 0);
- 	  		    return dias.getDate();
-	   		  }
-       
         	var amanha = new Date()
-        	var dia_amanha;
+       		var dia_amanha;
         	var mes_amanha;
-        	var ano_amanha;
+		var ano_amanha;
        
         	if(dia == diasNoMes(mes, ano)){
-        	  dia=1
-        	}
+         		dia=1
+          		mes = mes+1;
+      		 }
         	else {
-        	   dia = dia+1;
+          		dia = dia+1;
         	}
        
-        	if(mes == 12){
-        	   mes = 1;
-        	   ano = ano+1;
-        	}
-		else
-		   mes = mes+1;
-       
-        	data = ano + '-' + mes + '-' + dia;
+        	if(mes == 13){
+        		mes = 1;
+        		ano = ano+1;
 		}
-	    return data;
+        }
+       
+        data = ano + '-' + mes + '-' + dia;
+	}
+	return data;
     }
 
     function sextoDia() {
@@ -176,36 +176,36 @@ import Render from "react-dom";
         var ano = data.getFullYear();
 
         data = ano + '-' + mes + '-' + dia;
-
-		for(var i = 0; i <=4; i++){
-  
-      		  function diasNoMes(mes, ano) {
+	    
+	function diasNoMes(mes, ano) {
  	  		    var dias = new Date(ano, mes, 0);
  	  		    return dias.getDate();
-	   		  }
-       
+	}
+
+	for(var i = 0; i <=4; i++){
+  
         	var amanha = new Date()
-        	var dia_amanha;
+       		var dia_amanha;
         	var mes_amanha;
-        	var ano_amanha;
+		var ano_amanha;
        
         	if(dia == diasNoMes(mes, ano)){
-        	  dia=1
-        	}
+         		dia=1
+          		mes = mes+1;
+      		 }
         	else {
-        	   dia = dia+1;
+          		dia = dia+1;
         	}
        
-        	if(mes == 12){
-        	   mes = 1;
-        	   ano = ano+1;
-        	}
-		else
-		   mes = mes+1;
-       
-        	data = ano + '-' + mes + '-' + dia;
+        	if(mes == 13){
+        		mes = 1;
+        		ano = ano+1;
 		}
-	    return data;
+       	 }
+       
+        data = ano + '-' + mes + '-' + dia;
+	}
+	return data;
     }
 
     function setimoDia() {
@@ -215,35 +215,35 @@ import Render from "react-dom";
         var ano = data.getFullYear();
 
         data = ano + '-' + mes + '-' + dia;
+	    
+	function diasNoMes(mes, ano) {
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
+	}
 
 		for(var i = 0; i <=5; i++){
   
-      		  function diasNoMes(mes, ano) {
- 	  		    var dias = new Date(ano, mes, 0);
- 	  		    return dias.getDate();
-	   		  }
-       
         	var amanha = new Date()
-        	var dia_amanha;
+       		var dia_amanha;
         	var mes_amanha;
-        	var ano_amanha;
+		var ano_amanha;
        
         	if(dia == diasNoMes(mes, ano)){
-        	  dia=1
-        	}
+         		dia=1
+          		mes = mes+1;
+      		 }
         	else {
-        	   dia = dia+1;
+          		dia = dia+1;
         	}
        
-        	if(mes == 12){
-        	   mes = 1;
-        	   ano = ano+1;
-        	}
-		else
-		   mes = mes+1;
-       
-        	data = ano + '-' + mes + '-' + dia;
+        	if(mes == 13){
+        		mes = 1;
+        		ano = ano+1;
 		}
-	    return data;
+       	 }
+       
+        data = ano + '-' + mes + '-' + dia;
+	}
+	return data;
     }
     
