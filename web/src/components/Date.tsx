@@ -15,8 +15,8 @@ import Render from "react-dom";
     function dataAmanha() {
         
         function diasNoMes(mes, ano) {
- 	    var data = new Date(ano, mes, 0);
- 	    return data.getDate();
+ 	    var dias = new Date(ano, mes, 0);
+ 	    return dias.getDate();
 		}
 
 		var data = new Date();
@@ -61,8 +61,8 @@ import Render from "react-dom";
 		for(var i = 0; i <=1; i++){
   
       		  function diasNoMes(mes, ano) {
- 	  		    var data = new Date(ano, mes, 0);
- 	  		    return data.getDate();
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
 	   		  }
        
         	var amanha = new Date()
@@ -98,8 +98,8 @@ import Render from "react-dom";
 		for(var i = 0; i <=2; i++){
   
       		  function diasNoMes(mes, ano) {
- 	  		    var data = new Date(ano, mes, 0);
- 	  		    return data.getDate();
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
 	   		  }
        
         	var amanha = new Date()
@@ -135,8 +135,8 @@ import Render from "react-dom";
 		for(var i = 0; i <=3; i++){
   
       		  function diasNoMes(mes, ano) {
- 	  		    var data = new Date(ano, mes, 0);
- 	  		    return data.getDate();
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
 	   		  }
        
         	var amanha = new Date()
@@ -172,8 +172,8 @@ import Render from "react-dom";
 		for(var i = 0; i <=4; i++){
   
       		  function diasNoMes(mes, ano) {
- 	  		    var data = new Date(ano, mes, 0);
- 	  		    return data.getDate();
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
 	   		  }
        
         	var amanha = new Date()
@@ -209,8 +209,8 @@ import Render from "react-dom";
 		for(var i = 0; i <=5; i++){
   
       		  function diasNoMes(mes, ano) {
- 	  		    var data = new Date(ano, mes, 0);
- 	  		    return data.getDate();
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
 	   		  }
        
         	var amanha = new Date()
