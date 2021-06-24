@@ -51,7 +51,7 @@ import Render from "react-dom";
 
 
 
-    function terceiroDia() {
+    function segundoDia() {
         var data = new Date();
         var dia = data.getDate();
         var mes = (data.getMonth()+1);
@@ -91,7 +91,7 @@ import Render from "react-dom";
     }
 
 
-    function quartoDia() {
+    function terceiroDia() {
        var data = new Date();
         var dia = data.getDate();
         var mes = (data.getMonth()+1);
@@ -130,7 +130,7 @@ import Render from "react-dom";
 	return data;
     }
 
-    function quintoDia() {
+    function quartoDia() {
         var data = new Date();
         var dia = data.getDate();
         var mes = (data.getMonth()+1);
@@ -169,7 +169,7 @@ import Render from "react-dom";
 	return data;
     }
 
-    function sextoDia() {
+    function quintoDia() {
         var data = new Date();
         var dia = data.getDate();
         var mes = (data.getMonth()+1);
@@ -208,7 +208,7 @@ import Render from "react-dom";
 	return data;
     }
 
-    function setimoDia() {
+    function sextoDia() {
         var data = new Date();
         var dia = data.getDate();
         var mes = (data.getMonth()+1);
@@ -222,6 +222,46 @@ import Render from "react-dom";
 	}
 
 		for(var i = 0; i <=5; i++){
+  
+        	var amanha = new Date()
+       		var dia_amanha;
+        	var mes_amanha;
+		var ano_amanha;
+       
+        	if(dia == diasNoMes(mes, ano)){
+         		dia=1
+          		mes = mes+1;
+      		 }
+        	else {
+          		dia = dia+1;
+        	}
+       
+        	if(mes == 13){
+        		mes = 1;
+        		ano = ano+1;
+		}
+       	 }
+       
+        data = ano + '-' + mes + '-' + dia;
+	}
+	return data;
+    }
+
+
+    function setimoDia() {
+        var data = new Date();
+        var dia = data.getDate();
+        var mes = (data.getMonth()+1);
+        var ano = data.getFullYear();
+
+        data = ano + '-' + mes + '-' + dia;
+	    
+	function diasNoMes(mes, ano) {
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
+	}
+
+		for(var i = 0; i <=6; i++){
   
         	var amanha = new Date()
        		var dia_amanha;
