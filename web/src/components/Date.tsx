@@ -4,9 +4,9 @@ import Render from "react-dom";
 
    function dataHoje() {
         var data = new Date();
-        var dia = hoje.getDate();
-        var mes = (hoje.getMonth()+1);
-        var ano = hoje.getFullYear();
+        var dia = data.getDate();
+        var mes = (data.getMonth()+1);
+        var ano = data.getFullYear();
 
         data = ano + '-' + mes + '-' + dia;
         return data;
@@ -24,7 +24,7 @@ import Render from "react-dom";
         var mes = (data.getMonth()+1);
         var ano = data.getFullYear();
 
-        hoje = ano + '-' + mes + '-' + dia;
+        data = ano + '-' + mes + '-' + dia;
        
         var amanha = new Date()
         var dia_amanha;
@@ -56,7 +56,7 @@ import Render from "react-dom";
         var mes = (data.getMonth()+1);
         var ano = data.getFullYear();
 
-        hoje = ano + '-' + mes + '-' + dia;
+        data = ano + '-' + mes + '-' + dia;
 
 		for(var i = 0; i <=1; i++){
   
@@ -93,7 +93,7 @@ import Render from "react-dom";
         var mes = (data.getMonth()+1);
         var ano = data.getFullYear();
 
-        hoje = ano + '-' + mes + '-' + dia;
+        data = ano + '-' + mes + '-' + dia;
 
 		for(var i = 0; i <=2; i++){
   
@@ -130,7 +130,7 @@ import Render from "react-dom";
         var mes = (data.getMonth()+1);
         var ano = data.getFullYear();
 
-        hoje = ano + '-' + mes + '-' + dia;
+        data = ano + '-' + mes + '-' + dia;
 
 		for(var i = 0; i <=3; i++){
   
@@ -167,7 +167,7 @@ import Render from "react-dom";
         var mes = (data.getMonth()+1);
         var ano = data.getFullYear();
 
-        hoje = ano + '-' + mes + '-' + dia;
+        data = ano + '-' + mes + '-' + dia;
 
 		for(var i = 0; i <=4; i++){
   
@@ -204,7 +204,7 @@ import Render from "react-dom";
         var mes = (data.getMonth()+1);
         var ano = data.getFullYear();
 
-        hoje = ano + '-' + mes + '-' + dia;
+        data = ano + '-' + mes + '-' + dia;
 
 		for(var i = 0; i <=5; i++){
   
