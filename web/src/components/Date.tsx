@@ -17,7 +17,7 @@ import Render from "react-dom";
         function diasNoMes(mes, ano) {
  	    var dias = new Date(ano, mes, 0);
  	    return dias.getDate();
-		}
+	}
 
 		var data = new Date();
         var dia = data.getDate();
@@ -42,6 +42,8 @@ import Render from "react-dom";
            mes = 1;
            ano = ano+1;
         }
+	else
+	   mes = mes+1;
        
         data = ano + '-' + mes + '-' + dia;
       
@@ -57,14 +59,14 @@ import Render from "react-dom";
         var ano = data.getFullYear();
 
         data = ano + '-' + mes + '-' + dia;
+	    
+	function diasNoMes(mes, ano) {
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
+		}
 
 		for(var i = 0; i <=1; i++){
   
-      		  function diasNoMes(mes, ano) {
- 	  		    var dias = new Date(ano, mes, 0);
- 	  		    return dias.getDate();
-	   		  }
-       
         	var amanha = new Date()
         	var dia_amanha;
         	var mes_amanha;
@@ -81,6 +83,8 @@ import Render from "react-dom";
         	   mes = 1;
         	   ano = ano+1;
         	}
+		else
+		   mes = mes+1;
        
         	data = ano + '-' + mes + '-' + dia;
 		}
@@ -94,14 +98,14 @@ import Render from "react-dom";
         var ano = data.getFullYear();
 
         data = ano + '-' + mes + '-' + dia;
+	    
+	    function diasNoMes(mes, ano) {
+ 	  		    var dias = new Date(ano, mes, 0);
+ 	  		    return dias.getDate();
+	   	}
 
 		for(var i = 0; i <=2; i++){
   
-      		  function diasNoMes(mes, ano) {
- 	  		    var dias = new Date(ano, mes, 0);
- 	  		    return dias.getDate();
-	   		  }
-       
         	var amanha = new Date()
         	var dia_amanha;
         	var mes_amanha;
@@ -118,6 +122,8 @@ import Render from "react-dom";
         	   mes = 1;
         	   ano = ano+1;
         	}
+		else
+		   mes = mes+1;
        
         	data = ano + '-' + mes + '-' + dia;
 		}
@@ -155,6 +161,8 @@ import Render from "react-dom";
         	   mes = 1;
         	   ano = ano+1;
         	}
+		else
+		   mes = mes+1;
        
         	data = ano + '-' + mes + '-' + dia;
 		}
@@ -192,6 +200,8 @@ import Render from "react-dom";
         	   mes = 1;
         	   ano = ano+1;
         	}
+		else
+		   mes = mes+1;
        
         	data = ano + '-' + mes + '-' + dia;
 		}
@@ -229,6 +239,8 @@ import Render from "react-dom";
         	   mes = 1;
         	   ano = ano+1;
         	}
+		else
+		   mes = mes+1;
        
         	data = ano + '-' + mes + '-' + dia;
 		}
