@@ -52,9 +52,9 @@ import Render from "react-dom";
 
     function terceiroDia() {
         var data = new Date();
-        var dia = 31;//data.getDate();
-        var mes = 12;//(data.getMonth()+1);
-        var ano = 2021;//data.getFullYear();
+        var dia = data.getDate();
+        var mes = (data.getMonth()+1);
+        var ano = data.getFullYear();
 
         hoje = ano + '-' + mes + '-' + dia;
 
@@ -88,10 +88,10 @@ import Render from "react-dom";
     }
 
     function quartoDia() {
-        var data = new Date();
-        var dia = 31;//data.getDate();
-        var mes = 12;//(data.getMonth()+1);
-        var ano = 2021;//data.getFullYear();
+       var data = new Date();
+        var dia = data.getDate();
+        var mes = (data.getMonth()+1);
+        var ano = data.getFullYear();
 
         hoje = ano + '-' + mes + '-' + dia;
 
@@ -126,9 +126,9 @@ import Render from "react-dom";
 
     function quintoDia() {
         var data = new Date();
-        var dia = 31;//data.getDate();
-        var mes = 12;//(data.getMonth()+1);
-        var ano = 2021;//data.getFullYear();
+        var dia = data.getDate();
+        var mes = (data.getMonth()+1);
+        var ano = data.getFullYear();
 
         hoje = ano + '-' + mes + '-' + dia;
 
@@ -163,9 +163,9 @@ import Render from "react-dom";
 
     function sextoDia() {
         var data = new Date();
-        var dia = 31;//data.getDate();
-        var mes = 12;//(data.getMonth()+1);
-        var ano = 2021;//data.getFullYear();
+        var dia = data.getDate();
+        var mes = (data.getMonth()+1);
+        var ano = data.getFullYear();
 
         hoje = ano + '-' + mes + '-' + dia;
 
@@ -200,9 +200,9 @@ import Render from "react-dom";
 
     function setimoDia() {
         var data = new Date();
-        var dia = 31;//data.getDate();
-        var mes = 12;//(data.getMonth()+1);
-        var ano = 2021;//data.getFullYear();
+        var dia = data.getDate();
+        var mes = (data.getMonth()+1);
+        var ano = data.getFullYear();
 
         hoje = ano + '-' + mes + '-' + dia;
 
