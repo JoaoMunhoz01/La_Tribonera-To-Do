@@ -5,6 +5,7 @@ import { createConnection } from "typeorm";
 import LoginController from "./controllers/LoginController";
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import UserController from './controllers/UserController';
 
 const app = express();
 
@@ -27,6 +28,11 @@ app.post('/api/logout', async (req, res) => {
 
 app.post('/api/auth', async (req, res) => {
   res.send(await LoginController.auth(req, res));
+});
+
+app.get('/api/username', (req, res) => {
+  let name = UserController.getLoggedUserFirstName(req.cookies.access);
+  res.send(name);
 });
 
 createConnection().then(() => {

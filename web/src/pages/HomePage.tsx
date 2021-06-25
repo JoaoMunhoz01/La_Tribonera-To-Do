@@ -1,10 +1,17 @@
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import HomeGreeting from "../components/home/HomeGreeting";
 import HomeSidebar from "../components/home/HomeSidebar";
 import Navbar from "../components/Navbar";
 
 const HomePage = () => {
-  let [nome] = useState("Nome");
+  let [nome, setNome] = useState("");
+
+  useEffect(() => {
+    axios.get('/api/username').then(res => {
+      setNome(res.data);
+    });
+  }, []);
 
   return (
     <div>
