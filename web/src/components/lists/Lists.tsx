@@ -13,7 +13,7 @@ const Lists: React.FC = () => {
     newLists.splice(index, 1);
     setLists(newLists);
 
-    axios.delete("/api/lists/" + id);
+    axios.delete("/api/listas/" + id);
   };
 
   return (

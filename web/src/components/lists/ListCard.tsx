@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
-import React from "react";
+import React, { useContext } from "react";
 import List from "../../List";
+import { ListContext } from "./ListContext";
 
 interface Props {
   list: List;
@@ -9,6 +10,8 @@ interface Props {
 }
 
 const ListCard: React.FC<Props> = (props) => {
+  const {setEditingList, setShowModal} = useContext(ListContext);
+
   return (
     <li className="purple">
       <div className="left">
@@ -17,7 +20,12 @@ const ListCard: React.FC<Props> = (props) => {
 
       <div className="right">
         <span>
-          <FontAwesomeIcon icon={faEdit} className="task-icons" />
+          <FontAwesomeIcon icon={faEdit} className="task-icons"
+            onClick={() => {
+              setEditingList(props.list);
+              setShowModal(true);
+            }}
+          />
           <FontAwesomeIcon
             icon={faTrash}
             className="task-icons"

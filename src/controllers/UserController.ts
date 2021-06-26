@@ -22,6 +22,10 @@ class UserController {
       throw new Error('Could not find user');
     }
   }
+
+  static async getLoggedUserID(req: Request) {
+    return (await this.getLoggedUser(req)).id;
+  }
 };
 
 export default UserController;

@@ -1,3 +1,4 @@
+import EditModal from "../components/lists/EditModal";
 import { ListProvider } from "../components/lists/ListContext";
 import ListForm from "../components/lists/ListForm";
 import Lists from "../components/lists/Lists";
@@ -13,6 +14,7 @@ const ListsPage = () => {
         <ListProvider>
           <ListForm />
           <Lists />
+          <EditModal />
         </ListProvider>
       </div>
     </div>

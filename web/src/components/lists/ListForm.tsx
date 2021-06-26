@@ -17,7 +17,7 @@ const ListForm = () => {
     e.preventDefault();
 
     const name = listInput;
-    axios.post("/api/list/create", { name }).then(() => reloadLists());
+    axios.post("/api/listas/criar", { name }).then(() => reloadLists());
     setListInput("");
   };
 

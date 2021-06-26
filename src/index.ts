@@ -36,16 +36,20 @@ app.get('/api/username', (req, res) => {
   res.send(name);
 });
 
-app.post('/api/list/create', async (req, res) => {
+app.post('/api/listas/criar', async (req, res) => {
   res.send(await ListController.createList(req));
 });
 
-app.get('/api/lists', async (req, res) => {
+app.get('/api/listas', async (req, res) => {
   res.send(await ListController.getLists(req));
 });
 
-app.delete('/api/lists/:id', async (req, res) => {
+app.delete('/api/listas/:id', async (req, res) => {
   res.send(await ListController.removeList(req));
+});
+
+app.put('/api/listas', async (req,res) => {
+  res.send(await ListController.updateList(req));
 });
 
 createConnection().then(() => {

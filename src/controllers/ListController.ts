@@ -1,5 +1,6 @@
 import { Request } from "express";
 import { List } from "../models/List";
+import LoginController from "./LoginController";
 import UserController from "./UserController";
 
 export class ListController {
@@ -8,8 +9,8 @@ export class ListController {
     let name = req.body.name;
 
     try {
-      await List.insert({ name, user });
-      return "OK";
+      let result = await List.insert({ name, user });
+      return result.identifiers[0].id;
     } catch (err) {
       console.log(err);
     }
@@ -33,5 +34,22 @@ export class ListController {
       console.log(err);
       return false;
     }
+  }
+
+  static async updateList(req: Request) {
+    let id = req.body.id;
+    let name = req.body.name;
+
+    console.log(id, name);
+
+    const list = await List.findOne(id);
+
+    if (list.user.id === await UserController.getLoggedUserID(req)) {
+      list.name = name;
+      list.save();
+      return true;
+    }
+
+    return false;
   }
 };
