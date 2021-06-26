@@ -1,20 +1,28 @@
-import React from "react";
-import List from "../../List";
+import axios from "axios";
+import React, { useContext } from "react";
 import ListCard from "./ListCard";
+import { ListContext } from "./ListContext";
 
-interface Props {
-  lists: List[];
-  onRemoveList: (id: string) => void;
-}
+const Lists: React.FC = () => {
+  const {lists, setLists} = useContext(ListContext);
 
-const Lists: React.FC<Props> = props => {
+  const removeList = (index: number) => {
+    let id = lists[index].id;
+
+    let newLists = [...lists];
+    newLists.splice(index, 1);
+    setLists(newLists);
+
+    axios.delete("/api/lists/" + id);
+  };
+
   return (
     <ul>
-      {props.lists.map((list, index) => (
+      {lists.map((list, index) => (
         <ListCard
           key={index}
           list={list}
-          onRemoveList={() => props.onRemoveList(list.id)}
+          onRemoveList={() => {removeList(index)}}
         />
       ))}
       ;
