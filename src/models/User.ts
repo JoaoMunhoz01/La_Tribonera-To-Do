@@ -12,12 +12,12 @@ export class User extends BaseEntity {
     @Column()
     lastName: string;
 
-    @Column({unique: true})
+    @Column({ unique: true })
     email: string;
 
     @Column()
     password: string;
 
-    @OneToMany(() => List, list => list.user)
+    @OneToMany(() => List, list => list.user, { lazy: true })
     lists: List[];
 }

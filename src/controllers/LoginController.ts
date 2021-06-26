@@ -60,7 +60,7 @@ class LoginController {
 
   private static createToken = (user: User) => {
     let payload = { id: user.id, name: user.name };
-    return sign(payload, process.env.TOKEN_KEY!, { expiresIn: '15m' });
+    return sign(payload, process.env.TOKEN_KEY!, { expiresIn: '3h' });
   };
 
   private static generateCookie = (res: Response, user: User) => {

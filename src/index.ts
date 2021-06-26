@@ -6,6 +6,7 @@ import LoginController from "./controllers/LoginController";
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import UserController from './controllers/UserController';
+import { ListController } from './controllers/ListController';
 
 const app = express();
 
@@ -33,6 +34,18 @@ app.post('/api/auth', async (req, res) => {
 app.get('/api/username', (req, res) => {
   let name = UserController.getLoggedUserFirstName(req.cookies.access);
   res.send(name);
+});
+
+app.post('/api/list/create', async (req, res) => {
+  res.send(await ListController.createList(req));
+});
+
+app.get('/api/lists', async (req, res) => {
+  res.send(await ListController.getLists(req));
+});
+
+app.delete('/api/lists/:id', async (req, res) => {
+  res.send(await ListController.removeList(req));
 });
 
 createConnection().then(() => {

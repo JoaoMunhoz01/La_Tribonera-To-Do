@@ -56,7 +56,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <form>
+    <form className="form-container">
       <Alert text={alertText} show={showAlert} />
 
       <Input onChange={setName} nome="Nome" autocomplete="given-name" />

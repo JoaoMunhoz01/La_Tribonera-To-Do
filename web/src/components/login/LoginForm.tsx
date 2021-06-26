@@ -50,7 +50,7 @@ const LoginForm = () => {
   return success ? (
     <Redirect to="/" />
   ) : (
-    <form>
+    <form className="form-container">
       <Alert text={alertText} show={showAlert} />
 
       <Input

@@ -1,29 +1,23 @@
-import { useState } from "react";
-import List from "./List";
+import React from "react";
+import List from "../../List";
+import ListCard from "./ListCard";
 
-const nomesListas = [
-  "Lista 1",
-  "Lista 2",
-  "Lista 3",
-  "Lista 4"
-];
+interface Props {
+  lists: List[];
+  onRemoveList: (id: string) => void;
+}
 
-const Lists = () => {
-  let [listas, setListas] = useState(nomesListas);
-
-  const removerItem = (index: number) => {
-    let novaLista = [...listas];
-    novaLista.splice(index, 1);
-    setListas(novaLista);
-  };
-
+const Lists: React.FC<Props> = props => {
   return (
     <ul>
-      {
-        listas.map((lista, index) => (
-          <List key={index} nome={lista} onRemoverItem={() => {removerItem(index)}}/>
-        ))
-      };
+      {props.lists.map((list, index) => (
+        <ListCard
+          key={index}
+          list={list}
+          onRemoveList={() => props.onRemoveList(list.id)}
+        />
+      ))}
+      ;
     </ul>
   );
 };

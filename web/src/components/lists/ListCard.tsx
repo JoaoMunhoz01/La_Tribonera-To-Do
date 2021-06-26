@@ -1,17 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import List from "../../List";
 
 interface Props {
-  nome: string;
-  onRemoverItem: () => void;
+  list: List;
+  onRemoveList: () => void;
 }
 
-const List: React.FC<Props> = (props) => {
+const ListCard: React.FC<Props> = (props) => {
   return (
     <li className="purple">
       <div className="left">
-        <span className="list-name">{props.nome}</span>
+        <span className="list-name">{props.list.name}</span>
       </div>
 
       <div className="right">
@@ -20,7 +21,7 @@ const List: React.FC<Props> = (props) => {
           <FontAwesomeIcon
             icon={faTrash}
             className="task-icons"
-            onClick={props.onRemoverItem}
+            onClick={props.onRemoveList}
           />
         </span>
       </div>
@@ -28,4 +29,4 @@ const List: React.FC<Props> = (props) => {
   );
 };
 
-export default List;
+export default ListCard;
