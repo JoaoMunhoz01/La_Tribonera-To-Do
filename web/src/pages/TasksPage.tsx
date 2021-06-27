@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "../components/Navbar";
 import DoneList from "../components/tasks/DoneList";
 import SearchBar from "../components/tasks/SearchBar";
+import { TaskProvider } from "../components/tasks/TaskContext";
 import TodoList from "../components/tasks/TodoList";
 import Task from "../Task";
 import ListSelect from "./ListSelect";
@@ -41,23 +42,24 @@ const TasksPage = () => {
       <div className="container-vertical align-center">
         <h1 className="title">Tarefas</h1>
 
-				<ListSelect />
+        <TaskProvider>
+				  <ListSelect />
+          <SearchBar />
 
-				<SearchBar />
+          <TodoList
+            tasks={tasks}
+            onTaskDone={onTaskDone}
+            onTaskDelete={onTaskDelete}
+          />
 
-        <TodoList
-          tasks={tasks}
-          onTaskDone={onTaskDone}
-					onTaskDelete={onTaskDelete}
-        />
+          <h3>Concluídas</h3>
 
-        <h3>Concluídas</h3>
-
-        <DoneList
-          tasks={tasks}
-          onTaskDone={onTaskDone}
-					onTaskDelete={onTaskDelete}
-					/>
+          <DoneList
+            tasks={tasks}
+            onTaskDone={onTaskDone}
+            onTaskDelete={onTaskDelete}
+            />
+        </TaskProvider>
       </div>
     </div>
   );
