@@ -8,7 +8,7 @@ const ListForm = () => {
   const { setLists } = useContext(ListContext);
 
   const reloadLists = () => {
-    axios.get('/api/lists').then(res => {
+    axios.get('/api/listas').then(res => {
       setLists(res.data);
     });
   };
