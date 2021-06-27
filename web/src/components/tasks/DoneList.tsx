@@ -17,6 +17,7 @@ const DoneList: React.FC<Props> = (props) => {
             task={task}
             onTaskDone={() => props.onTaskDone(index)}
             onTaskDelete={() => props.onTaskDelete(index)}
+            key={index}
           />
         ) : null
       )}
