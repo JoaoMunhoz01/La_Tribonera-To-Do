@@ -359,3 +359,26 @@ li.purple > .left > * {
 .list-form {
   padding: 1rem;
 }
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-modal {
+  background: linear-gradient(180deg, #B272F2 0%, #6D8EF2 100%);
+  border-radius: 1rem;
+  padding: 3rem;
+}
+
+.disp-none {
+  display: none;
+}
