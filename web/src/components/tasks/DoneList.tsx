@@ -1,22 +1,40 @@
-import React from "react";
-import Task from "../../Task";
+import axios from "axios";
+import React, { useContext } from "react";
+import { TaskContext } from "./TaskContext";
 import TodoItem from "./TodoItem";
 
-interface Props {
-  tasks: Task[];
-  onTaskDone: (index: number) => void;
-  onTaskDelete: (index: number) => void;
-}
+const DoneList: React.FC = () => {
+  const { tasks, setTasks } = useContext(TaskContext);
 
-const DoneList: React.FC<Props> = (props) => {
+  const onDone = (index: number) => {
+    let newTasks = [...tasks];
+    newTasks[index].done = !newTasks[index].done;
+    setTasks(newTasks);
+
+    let data = {
+      name: newTasks[index].name,
+      id: newTasks[index].id,
+      done: newTasks[index].done
+    };
+
+    axios.put('/api/tarefa', data);
+  };
+
+  const onDelete = (index: number) => {
+    let newTasks = [...tasks];
+    axios.delete('/api/tarefa/' + tasks[index].id);
+    newTasks.splice(index, 1);
+    setTasks(newTasks);
+  };
+
   return (
     <ul>
-      {props.tasks.map((task, index) =>
+      {tasks.map((task, index) =>
         task.done ? (
           <TodoItem
             task={task}
-            onTaskDone={() => props.onTaskDone(index)}
-            onTaskDelete={() => props.onTaskDelete(index)}
+            onTaskDone={() => onDone(index)}
+            onTaskDelete={() => onDelete(index)}
             key={index}
           />
         ) : null

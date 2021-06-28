@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createContext } from "react";
 import List from "../../List";
 import Task from "../../Task";
@@ -17,13 +18,16 @@ export const TaskContext = createContext<ContextType>({
 });
 
 export const TaskProvider: React.FC = ({ children }) => {
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [currentList, setCurrentList] = useState<List | undefined>();
+
   return (
     <TaskContext.Provider
       value={{
-        tasks: [],
-        setTasks: () => {},
-        currentList: undefined,
-        setCurrentList: () => {},
+        tasks,
+        setTasks,
+        currentList,
+        setCurrentList,
       }}
     >
       {children}

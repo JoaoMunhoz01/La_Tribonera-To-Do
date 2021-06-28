@@ -1,4 +1,4 @@
-import { Request } from "express";
+import { Request, Response } from "express";
 import { List } from "../models/List";
 import LoginController from "./LoginController";
 import UserController from "./UserController";
@@ -51,5 +51,11 @@ export class ListController {
     }
 
     return false;
+  }
+
+  static async getTasks(req: Request, res: Response) {
+    let listID = req.params.id;
+    const list = await List.findOne(listID);
+    res.send(await list.tasks);
   }
 };

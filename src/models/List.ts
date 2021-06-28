@@ -13,6 +13,6 @@ export class List extends BaseEntity {
   @ManyToOne(() => User, user => user.lists, { eager: true })
   user: User;
 
-  @OneToMany(() => Task, task => task.list)
+  @OneToMany(() => Task, task => task.list, { lazy: true })
   tasks: Task[];
 };

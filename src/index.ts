@@ -7,6 +7,8 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import UserController from './controllers/UserController';
 import { ListController } from './controllers/ListController';
+import path from 'path';
+import { TaskController } from './controllers/TaskController';
 
 const app = express();
 
@@ -14,6 +16,7 @@ app.use(cookieParser());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../web/build')));
 
 app.post('/api/registrar', async (req, res) => {
   res.send(await LoginController.register(req));
@@ -44,12 +47,32 @@ app.get('/api/listas', async (req, res) => {
   res.send(await ListController.getLists(req));
 });
 
+app.get('/api/listas/:id/tarefas', async (req, res) => {
+  await ListController.getTasks(req, res);
+});
+
 app.delete('/api/listas/:id', async (req, res) => {
   res.send(await ListController.removeList(req));
 });
 
 app.put('/api/listas', async (req,res) => {
   res.send(await ListController.updateList(req));
+});
+
+app.post('/api/tarefa', async (req, res) => {
+  await TaskController.create(req, res);
+});
+
+app.delete('/api/tarefa/:id', async (req, res) => {
+  await TaskController.delete(req, res);
+});
+
+app.put('/api/tarefa', async (req, res) => {
+  await TaskController.update(req, res);
+});
+
+app.get('*', (_, res) => {
+  res.sendFile(path.join(__dirname, '../web/build/index.html'));
 });
 
 createConnection().then(() => {
