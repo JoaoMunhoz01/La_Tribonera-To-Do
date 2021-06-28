@@ -4,7 +4,6 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import HomePage from "./pages/HomePage";
 import ListsPage from "./pages/ListsPage";
-import CalendarPage from "./pages/CalendarPage";
 import TasksPage from "./pages/TasksPage";
 import PrivateRoute from "./components/PrivateRoute";
 import Logout from "./components/Logout";
@@ -27,10 +26,6 @@ const Routes: React.FC = () => {
 
         <PrivateRoute path="/listas" exact>
           <ListsPage />
-        </PrivateRoute>
-
-        <PrivateRoute path="/calendario" exact>
-          <CalendarPage />
         </PrivateRoute>
 
         <PrivateRoute path="/tarefas" exact>

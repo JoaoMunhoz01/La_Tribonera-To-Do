@@ -1,10 +1,8 @@
-import { useContext } from "react";
 import Navbar from "../components/Navbar";
 import DoneList from "../components/tasks/DoneList";
 import SearchBar from "../components/tasks/SearchBar";
 import { TaskProvider } from "../components/tasks/TaskContext";
 import TodoList from "../components/tasks/TodoList";
-import Task from "../Task";
 import ListSelect from "./ListSelect";
 
 const TasksPage = () => {

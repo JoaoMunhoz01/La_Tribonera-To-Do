@@ -18,9 +18,6 @@ const Navbar = () => {
             <Link to="/listas">Listas</Link>
           </li>
           <li className="nav-item">
-            <Link to="/calendario">Calendário</Link>
-          </li>
-          <li className="nav-item">
             <Link to="/logout">Sair</Link>
           </li>
         </div>
